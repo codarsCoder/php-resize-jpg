@@ -43,11 +43,11 @@ if (isset($_POST["filemm"])) {
           //imagecopyresized($yeni_resim, $mevcut_resim, 0, 0, 0, 0, $yeni_genislik, $yeni_yukseklik, $genislik, $yukseklik);
     $rasgeleisim = uniqid();
     
-          $son_resim = "assets/{$rasgeleisim}.jpg";
+          $son_resim = "assets/".$rasgeleisim.".jpg";
     imagejpeg($hedef,$son_resim,20);
   
     unlink($dosya);
-          echo "<br> gen:".$genislik.$yeni_yukseklik;
+          echo "<br> <img src='$son_resim' >";
   }
 }
          
